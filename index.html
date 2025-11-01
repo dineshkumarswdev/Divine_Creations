@@ -1,21 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Static Website</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divine Creations Leather Bags & Accessories</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
 </head>
 <body>
-  <header>
-    <h1>Welcome to My Website</h1>
-  </header>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <h1 class="logo">Divine Creations</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#vision">Vision</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-  <main>
-    <p>This is a simple static website built with HTML, CSS, and JS!</p>
-    <button id="clickMe">Click Me</button>
-  </main>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container hero-content">
+            <h2>Quality Products at Indian Prices, Service at European Standards</h2>
+            <p>Handcrafted leather bags and accessories for every style and occasion.</p>
+            <a href="#products" class="btn">Explore Products</a>
+        </div>
+    </section>
 
-  <script src="script.js"></script>
+    <!-- About Section -->
+    <section id="about" class="fade-in">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>
+                Divine Creations Leather Bags & Accessories is founded by two experienced professionals combining product development and marketing expertise. We offer high-quality leather bags, wallets, belts, and accessories with a vintage and contemporary style.
+            </p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="fade-in">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="product-carousel">
+                <div class="product-card">
+                    <img src="images/bag1.jpg" alt="Leather Bag">
+                    <h3>Leather Bag</h3>
+                    <p>Vintage distressed leather bag for casual and formal use.</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/wallet1.jpg" alt="Leather Wallet">
+                    <h3>Leather Wallet</h3>
+                    <p>Premium vegetable-tanned leather wallets with embossed branding.</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/belt1.jpg" alt="Leather Belt">
+                    <h3>Leather Belt</h3>
+                    <p>High-quality leather belts with durable metal trims.</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/bag2.jpg" alt="Bag">
+                    <h3>Leather Satchel</h3>
+                    <p>Elegant leather satchel for daily use and office wear.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section id="vision" class="fade-in">
+        <div class="container">
+            <h2>Our Vision</h2>
+            <p>
+                We specialize in customized leather products that combine timeless design with modern fashion. All our products are made with re-tanned vegetable leathers and high-quality metal trims, designed to meet international standards. We prioritize customer satisfaction and long-term business relationships.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="fade-in">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Address: 87 Marriamman Koil Street, Morrison Thottam, Puducherry 605009</p>
+            <p>Phone: +91 7200767773 | Email: admin@dcleathers.net</p>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <p id="formMessage"></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Divine Creations Leather Bags & Accessories. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JS Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

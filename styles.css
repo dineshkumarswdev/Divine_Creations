@@ -1,25 +1,56 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  margin: 0;
-  padding: 20px;
-}
+/* Reset & Basics */
+* {margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif;}
+body {line-height:1.6; color:#333;}
+.container {width:90%; max-width:1200px; margin:auto;}
 
-header {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  text-align: center;
-}
+/* Header */
+header {background:#2c2c2c; color:#fff; padding:20px 0; position:fixed; width:100%; z-index:100;}
+header .header-container {display:flex; justify-content:space-between; align-items:center;}
+header .logo {font-size:24px;}
+header nav ul {display:flex; list-style:none;}
+header nav ul li {margin-left:20px;}
+header nav ul li a {color:#fff; text-decoration:none; font-weight:bold; transition:0.3s;}
+header nav ul li a:hover {color:#d4af37;}
 
-button {
-  background-color: #0078d7;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-}
+/* Hamburger */
+.hamburger {display:none; flex-direction:column; cursor:pointer;}
+.hamburger div {width:25px; height:3px; background:#fff; margin:4px 0;}
 
-button:hover {
-  background-color: #005fa3;
+/* Hero */
+#hero {background:url('images/hero.jpg') no-repeat center center/cover; height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; padding-top:60px;}
+#hero h2 {font-size:36px; margin-bottom:10px;}
+#hero p {font-size:20px; margin-bottom:20px;}
+.btn {padding:12px 25px; background:#d4af37; color:#fff; text-decoration:none; font-weight:bold; border-radius:5px; transition:0.3s;}
+.btn:hover {background:#b8912b;}
+
+/* Sections */
+section {padding:80px 0;}
+section h2 {text-align:center; font-size:32px; margin-bottom:30px;}
+section p {text-align:center; max-width:800px; margin:0 auto;}
+
+/* Products */
+.product-carousel {display:flex; gap:20px;}
+.product-card {border:1px solid #ccc; padding:20px; text-align:center; border-radius:10px; background:#fff; transition:transform 0.3s;}
+.product-card img {width:100%; border-radius:10px;}
+.product-card:hover {transform:scale(1.05);}
+
+/* Contact Form */
+form {display:flex; flex-direction:column; gap:15px; max-width:600px; margin:20px auto;}
+form input, form textarea {padding:10px; font-size:16px; border-radius:5px; border:1px solid #ccc;}
+form button {padding:12px; background:#2c2c2c; color:#fff; border:none; border-radius:5px; font-weight:bold; cursor:pointer; transition:0.3s;}
+form button:hover {background:#d4af37;}
+
+/* Footer */
+footer {text-align:center; background:#2c2c2c; color:#fff; padding:20px 0; margin-top:40px;}
+
+/* Fade-in Animation */
+.fade-in {opacity:0; transform:translateY(50px); transition:all 1s ease-in-out;}
+.fade-in.show {opacity:1; transform:translateY(0);}
+
+/* Responsive */
+@media(max-width:768px){
+    header nav ul {display:none; flex-direction:column; background:#2c2c2c; position:absolute; top:60px; right:0; width:200px;}
+    header nav ul.active {display:flex;}
+    .hamburger {display:flex;}
+    .product-carousel {flex-direction:column;}
 }
